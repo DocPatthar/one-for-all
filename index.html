@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            text-decoration: none;
+            background-color: #3498db;
+            color: #ffffff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Dynamic Test Page</h1>
+
+    <p>Choose a test:</p>
+
+    <button class="button" onclick="loadQuestions('random')">20 Random Questions</button>
+    <button class="button" onclick="loadQuestions('all')">All Questions</button>
+
+    <div id="questions-container"></div>
+
+    <script>
+        // The JavaScript code will go here
+    </script>
+</body>
+</html>
