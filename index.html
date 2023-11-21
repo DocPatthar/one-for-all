@@ -39,8 +39,24 @@
 
     <div id="questions-container"></div>
 
-    <script>
-        // The JavaScript code will go here
-    </script>
+<script>
+    function loadQuestions(option) {
+        
+       var url = 'https://raw.githubusercontent.com/DocPatthar/txt-for-childrens-disease/main/questions.txt';
+
+        // Fetch the content of the selected file
+        fetch(url)
+            .then(response => response.text())
+            .then(data => displayQuestions(data))
+            .catch(error => console.error('Error fetching questions:', error));
+    }
+
+    function displayQuestions(questions) {
+        // Process and display the questions as needed
+        var questionsContainer = document.getElementById('questions-container');
+        questionsContainer.innerHTML = '<h2>Questions</h2>';
+        questionsContainer.innerHTML += '<p>' + questions + '</p>';
+    }
+</script>
 </body>
 </html>
